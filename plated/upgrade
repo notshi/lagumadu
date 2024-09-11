@@ -4,3 +4,6 @@ npx npm-check-updates -u
 npm install
 npm update
 
+npm --prefix ../js install
+
+
