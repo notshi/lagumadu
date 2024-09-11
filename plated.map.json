@@ -59,7 +59,26 @@
   "_root": "./",
   "_site": "{_root}",
   "_sourcename": "index.^.html",
-  "body": "<h2 id=\"welcome\">Welcome</h2>\n<p>Here is a web page rendered from markdown.</p>\n",
+  "body": "<h2 id=\"welcome\">Welcome</h2>\n<p>Here is a web page rendered from markdown.</p>\n<p><a href=\"./lagumadu.html\">START</a></p>\n",
   "title": "This is the title"
+ },
+ "lagumadu.html": {
+  "_dirname": "{_root}",
+  "_filename": "{_root}lagumadu.html",
+  "_flags": {
+   "body": {
+    "trim": "ends"
+   },
+   "title": {
+    "trim": "ends"
+   }
+  },
+  "_output_chunkname": "html",
+  "_output_filename": "lagumadu.html",
+  "_root": "./",
+  "_site": "{_root}",
+  "_sourcename": "lagumadu.^.html",
+  "body": "<script src=\"./js/lagumadu.js\"></script>\n<script type=\"module\">\n\tlet opts={}\n\tlet app=await lagumadu\n\tapp.default.start(opts)\n</script>",
+  "title": "Lagumadu"
  }
 }
