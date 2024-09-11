@@ -11,10 +11,8 @@ import {Howl, Howler} from 'howler';
 
 lagumadu.start=async function(opts)
 {
-	console.log(1)
 	const f=function(e)
 	{
-		console.log(2)
 		document.removeEventListener("click",f)
 		if(!lagumadu.started)
 		{
@@ -56,15 +54,24 @@ lagumadu.update_layer=function(layer)
 		}
 	}
 
-	console.log("update "+layer.idx)
+//	console.log("update "+layer.idx)
 
 	if(layer.toplay.length==0) { lagumadu.layer_shuffle(layer) } // new shuffle?
 	
 	layer.sound=layer.toplay.pop()
 	layer.sound.play()
+	console.log("play",layer.idx,layer.sound.myname)
 
 }
 
+lagumadu.new_sound=function(layer,name)
+{
+	let sound=new Howl({src:[ "./data/"+name+".mp3"  ]})
+	sound.myname=name
+	layer.sounds.push(sound)
+
+	return sound
+}
 
 lagumadu.new_layer=function(idx)
 {
@@ -89,7 +96,7 @@ lagumadu.start_ffs=async function(opts)
 		let layer=lagumadu.new_layer(idx)
 		lagumadu.layers[idx]=layer
 		
-		layer.sounds.push( new Howl({src:[ "./data/drone.mp3"  ]}) )
+		lagumadu.new_sound(layer,"drone")
 	}
 
 	{
@@ -97,10 +104,10 @@ lagumadu.start_ffs=async function(opts)
 		let layer=lagumadu.new_layer(idx)
 		lagumadu.layers[idx]=layer
 		
-		layer.sounds.push( new Howl({src:[ "./data/test1.mp3"  ]}) )
-		layer.sounds.push( new Howl({src:[ "./data/test2.mp3"  ]}) )
-		layer.sounds.push( new Howl({src:[ "./data/test3.mp3"  ]}) )
-		layer.sounds.push( new Howl({src:[ "./data/test4.mp3"  ]}) )
+		lagumadu.new_sound(layer,"test1")
+		lagumadu.new_sound(layer,"test2")
+		lagumadu.new_sound(layer,"test3")
+		lagumadu.new_sound(layer,"test4")
 	}
 
 	{
@@ -108,10 +115,10 @@ lagumadu.start_ffs=async function(opts)
 		let layer=lagumadu.new_layer(idx)
 		lagumadu.layers[idx]=layer
 		
-		layer.sounds.push( new Howl({src:[ "./data/test5.mp3"  ]}) )
-		layer.sounds.push( new Howl({src:[ "./data/test6.mp3"  ]}) )
-		layer.sounds.push( new Howl({src:[ "./data/test7.mp3"  ]}) )
-		layer.sounds.push( new Howl({src:[ "./data/test8.mp3"  ]}) )
+		lagumadu.new_sound(layer,"test5")
+		lagumadu.new_sound(layer,"test6")
+		lagumadu.new_sound(layer,"test7")
+		lagumadu.new_sound(layer,"test8")
 	}
 
 	{
@@ -119,8 +126,8 @@ lagumadu.start_ffs=async function(opts)
 		let layer=lagumadu.new_layer(idx)
 		lagumadu.layers[idx]=layer
 		
-		layer.sounds.push( new Howl({src:[ "./data/test9.mp3"  ]}) )
-		layer.sounds.push( new Howl({src:[ "./data/test10.mp3" ]}) )
+		lagumadu.new_sound(layer,"test9")
+		lagumadu.new_sound(layer,"test10")
 	}
 	
 	
@@ -128,8 +135,25 @@ lagumadu.start_ffs=async function(opts)
 
 }
 
+lagumadu.loading=true
 lagumadu.update=async function(opts)
 {
+	if(lagumadu.loading)
+	{
+		for(let layer of lagumadu.layers)
+		{
+			for(let sound of layer.sounds)
+			{
+				if(sound.state()!="loaded")
+				{
+					console.log( sound.state() )
+					return
+				}
+			}
+		}
+		lagumadu.loading=false
+	}
+
 	for(let layer of lagumadu.layers)
 	{
 		lagumadu.update_layer(layer)
