@@ -4,6 +4,7 @@
 	"source": "lagumadu.js",
 	"type": "module",
 	"dependencies": {
+		"howler": "^2.2.4"
 	},
 	"scripts": {
 		"watch": " webpack watch --config webpack.config.cjs --mode development ",
