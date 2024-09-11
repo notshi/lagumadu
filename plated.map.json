@@ -35,6 +35,13 @@
   "_site": "{_root}",
   "_sourcename": "^/."
  },
+ "data": {
+  "_dirname": "{_root}data",
+  "_filename": "{_root}data",
+  "_root": "../",
+  "_site": "{_root}",
+  "_sourcename": "data/."
+ },
  "index.html": {
   "_dirname": "{_root}",
   "_filename": "{_root}index.html",
