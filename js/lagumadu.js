@@ -9,21 +9,6 @@ import web_data from "./web_data.json" with { type: "json" }
 import {Howl, Howler} from 'howler';
 
 
-lagumadu.start=async function(opts)
-{
-	const f=function(e)
-	{
-		document.removeEventListener("click",f)
-		if(!lagumadu.started)
-		{
-			lagumadu.started=true
-			lagumadu.start_ffs(opts)
-		}
-	}
-	document.addEventListener("click",f, true); 
-
-}
-
 
 let htmltemplate=function(s)
 {
@@ -85,10 +70,23 @@ lagumadu.update_layer=function(layer)
 
 lagumadu.new_sound=function(layer,name)
 {
-	let sound=new Howl({src:[ "./data/"+name+".mp3"  ]})
+	let sound=new Howl({
+		src:[ "./data/"+name+".mp3"  ],
+		onplayerror: function()
+		{
+			console.log("lock")
+			lagumadu.locked=true
+			sound.once('unlock', function()
+			{
+				console.log("unlock")
+				lagumadu.locked=false
+			})
+		}
+	})
 	sound.myname=name
 	layer.sounds.push(sound)
 
+  
 	return sound
 }
 
@@ -106,7 +104,7 @@ lagumadu.new_layer=function(idx)
 	return layer
 }
 
-lagumadu.start_ffs=async function(opts)
+lagumadu.start=async function(opts)
 {
 	console.log("START lagumadu")
 	
@@ -170,6 +168,11 @@ lagumadu.start_ffs=async function(opts)
 lagumadu.loading=true
 lagumadu.update=async function(opts)
 {
+	if(lagumadu.locked) // wait for click
+	{
+		return
+	}
+	
 	if(lagumadu.loading)
 	{
 		for(let layer of lagumadu.layers)
