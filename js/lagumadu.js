@@ -127,10 +127,10 @@ lagumadu.start_ffs=async function(opts)
 		let layer=lagumadu.new_layer(idx)
 		lagumadu.layers[idx]=layer
 		
-		lagumadu.new_sound(layer,"test1")
-		lagumadu.new_sound(layer,"test2")
-		lagumadu.new_sound(layer,"test3")
-		lagumadu.new_sound(layer,"test4")
+		lagumadu.new_sound(layer,"bd1")
+		lagumadu.new_sound(layer,"bd2")
+		lagumadu.new_sound(layer,"bd3")
+		lagumadu.new_sound(layer,"bd4")
 
 		layer.wait=[0,2]
 	}
@@ -140,10 +140,10 @@ lagumadu.start_ffs=async function(opts)
 		let layer=lagumadu.new_layer(idx)
 		lagumadu.layers[idx]=layer
 		
-		lagumadu.new_sound(layer,"test5")
-		lagumadu.new_sound(layer,"test6")
-		lagumadu.new_sound(layer,"test7")
-		lagumadu.new_sound(layer,"test8")
+		lagumadu.new_sound(layer,"bd5")
+		lagumadu.new_sound(layer,"bd6")
+		lagumadu.new_sound(layer,"bd7")
+		lagumadu.new_sound(layer,"bd8")
 
 		layer.wait=[0,2]
 	}
@@ -153,8 +153,11 @@ lagumadu.start_ffs=async function(opts)
 		let layer=lagumadu.new_layer(idx)
 		lagumadu.layers[idx]=layer
 		
-		lagumadu.new_sound(layer,"test9")
-		lagumadu.new_sound(layer,"test10")
+		lagumadu.new_sound(layer,"sg1")
+		lagumadu.new_sound(layer,"sg2")
+		lagumadu.new_sound(layer,"sg3")
+		lagumadu.new_sound(layer,"sg4")
+		lagumadu.new_sound(layer,"sg5")
 
 		layer.wait=[10,60]
 	}
