@@ -176,7 +176,7 @@ lagumadu.start=async function(opts)
 		lagumadu.new_sound(layer,"sg4")
 		lagumadu.new_sound(layer,"sg5")
 
-		layer.wait=[10,60]
+		layer.wait=[10,60] // min, max in seconds delay
 		layer.stereo=[-1,1]
 		layer.volume=[1,1]
 	}
