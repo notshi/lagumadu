@@ -72,6 +72,7 @@ lagumadu.new_sound=function(layer,name)
 {
 	let sound=new Howl({
 		src:[ "./data/"+name+".mp3"  ],
+/*
 		onplayerror: function()
 		{
 			console.log("lock")
@@ -82,6 +83,7 @@ lagumadu.new_sound=function(layer,name)
 				lagumadu.locked=false
 			})
 		}
+*/
 	})
 	sound.myname=name
 	layer.sounds.push(sound)
