@@ -128,7 +128,7 @@ lagumadu.start=async function(opts)
 		
 		lagumadu.new_sound(layer,"drone")
 		
-		layer.wait=[0,0]
+		layer.wait=[0,1]
 		layer.stereo=[0,0]
 		layer.volume=[1,1]
 	}
@@ -144,7 +144,7 @@ lagumadu.start=async function(opts)
 		lagumadu.new_sound(layer,"bd4")
 		lagumadu.new_sound(layer,"shh1")
 
-		layer.wait=[0,2]
+		layer.wait=[1,5]
 		layer.stereo=[-1,1]
 		layer.volume=[1,1]
 	}
