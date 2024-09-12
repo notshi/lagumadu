@@ -119,7 +119,7 @@ lagumadu.start=async function(opts)
 		
 		lagumadu.new_sound(layer,"drone")
 		
-		layer.wait=[0,0]
+		layer.wait=[0,1]
 	}
 
 	{
@@ -131,8 +131,9 @@ lagumadu.start=async function(opts)
 		lagumadu.new_sound(layer,"bd2")
 		lagumadu.new_sound(layer,"bd3")
 		lagumadu.new_sound(layer,"bd4")
+		lagumadu.new_sound(layer,"shh1")
 
-		layer.wait=[0,2]
+		layer.wait=[1,5]
 	}
 
 	{
@@ -144,6 +145,7 @@ lagumadu.start=async function(opts)
 		lagumadu.new_sound(layer,"bd6")
 		lagumadu.new_sound(layer,"bd7")
 		lagumadu.new_sound(layer,"bd8")
+		lagumadu.new_sound(layer,"shh2")
 
 		layer.wait=[0,2]
 	}
@@ -159,7 +161,7 @@ lagumadu.start=async function(opts)
 		lagumadu.new_sound(layer,"sg4")
 		lagumadu.new_sound(layer,"sg5")
 
-		layer.wait=[10,60]
+		layer.wait=[10,60] // min, max in seconds delay
 	}
 	
 	
