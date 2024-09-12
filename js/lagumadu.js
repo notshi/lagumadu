@@ -53,6 +53,25 @@ lagumadu.update_layer=function(layer)
 			return
 		}
 	}
+	
+	if(!layer.time_now)
+	{
+		layer.time_now=(performance.now()/1000)
+	}
+
+	if(!layer.time_len)
+	{
+		layer.time_len=layer.wait[0]+((layer.wait[1]-layer.wait[0])*Math.random())
+		console.log("wait",layer.idx,layer.time_len)
+	}
+	
+	if( layer.time_now + layer.time_len > (performance.now()/1000) )
+	{
+		return // wait
+	}
+
+	layer.time_now=null
+	layer.time_len=null
 
 //	console.log("update "+layer.idx)
 
@@ -82,6 +101,8 @@ lagumadu.new_layer=function(idx)
 	
 	layer.toplay=[]
 	
+	layer.wait=[0,0]
+	
 	return layer
 }
 
@@ -97,6 +118,8 @@ lagumadu.start_ffs=async function(opts)
 		lagumadu.layers[idx]=layer
 		
 		lagumadu.new_sound(layer,"drone")
+		
+		layer.wait=[0,0]
 	}
 
 	{
@@ -108,6 +131,8 @@ lagumadu.start_ffs=async function(opts)
 		lagumadu.new_sound(layer,"test2")
 		lagumadu.new_sound(layer,"test3")
 		lagumadu.new_sound(layer,"test4")
+
+		layer.wait=[0,2]
 	}
 
 	{
@@ -119,6 +144,8 @@ lagumadu.start_ffs=async function(opts)
 		lagumadu.new_sound(layer,"test6")
 		lagumadu.new_sound(layer,"test7")
 		lagumadu.new_sound(layer,"test8")
+
+		layer.wait=[0,2]
 	}
 
 	{
@@ -128,6 +155,8 @@ lagumadu.start_ffs=async function(opts)
 		
 		lagumadu.new_sound(layer,"test9")
 		lagumadu.new_sound(layer,"test10")
+
+		layer.wait=[10,60]
 	}
 	
 	
