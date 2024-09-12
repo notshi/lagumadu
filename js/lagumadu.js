@@ -57,14 +57,21 @@ lagumadu.update_layer=function(layer)
 
 	layer.time_now=null
 	layer.time_len=null
+	
+	layer.stereo_num=layer.stereo[0] + ( Math.random()*(layer.stereo[1]-layer.stereo[0]) )
+	layer.volume_num=layer.volume[0] + ( Math.random()*(layer.volume[1]-layer.volume[0]) )
 
 //	console.log("update "+layer.idx)
 
 	if(layer.toplay.length==0) { lagumadu.layer_shuffle(layer) } // new shuffle?
 	
 	layer.sound=layer.toplay.pop()
+
+	layer.sound.stereo(layer.stereo_num)
+	layer.sound.volume(layer.volume_num)
 	layer.sound.play()
-	console.log("play",layer.idx,layer.sound.myname)
+	let vp=Math.floor(layer.volume_num*100)+"%"
+	console.log("play",layer.idx,layer.sound.myname,vp,layer.stereo_num)
 
 }
 
@@ -102,6 +109,8 @@ lagumadu.new_layer=function(idx)
 	layer.toplay=[]
 	
 	layer.wait=[0,0]
+	layer.stereo=[0,0]
+	layer.volume=[1,1]
 	
 	return layer
 }
@@ -120,6 +129,8 @@ lagumadu.start=async function(opts)
 		lagumadu.new_sound(layer,"drone")
 		
 		layer.wait=[0,0]
+		layer.stereo=[0,0]
+		layer.volume=[1,1]
 	}
 
 	{
@@ -133,6 +144,8 @@ lagumadu.start=async function(opts)
 		lagumadu.new_sound(layer,"bd4")
 
 		layer.wait=[0,2]
+		layer.stereo=[-1,1]
+		layer.volume=[1,1]
 	}
 
 	{
@@ -146,6 +159,8 @@ lagumadu.start=async function(opts)
 		lagumadu.new_sound(layer,"bd8")
 
 		layer.wait=[0,2]
+		layer.stereo=[-1,1]
+		layer.volume=[1,1]
 	}
 
 	{
@@ -160,6 +175,8 @@ lagumadu.start=async function(opts)
 		lagumadu.new_sound(layer,"sg5")
 
 		layer.wait=[10,60]
+		layer.stereo=[-1,1]
+		layer.volume=[1,1]
 	}
 	
 	
