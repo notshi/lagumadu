@@ -130,10 +130,12 @@ lagumadu.start=async function(opts)
 		lagumadu.new_sound(layer,"no2")
 		lagumadu.new_sound(layer,"no3")
 		lagumadu.new_sound(layer,"no4")
+		lagumadu.new_sound(layer,"no5")
+		lagumadu.new_sound(layer,"no6")
 		lagumadu.new_sound(layer,"shh1")
 		lagumadu.new_sound(layer,"shh2")
 		
-		layer.wait=[0,5]
+		layer.wait=[0,60]
 		layer.stereo=[0,0]
 		layer.volume=[1,1]
 	}
@@ -153,7 +155,7 @@ lagumadu.start=async function(opts)
 		lagumadu.new_sound(layer,"bd11")
 		lagumadu.new_sound(layer,"bd14")
 
-		layer.wait=[1,7]
+		layer.wait=[1,10]
 		layer.stereo=[-1,1]
 		layer.volume=[1,1]
 	}
@@ -172,7 +174,7 @@ lagumadu.start=async function(opts)
 		lagumadu.new_sound(layer,"bd13")
 		lagumadu.new_sound(layer,"bd15")
 
-		layer.wait=[0,2]
+		layer.wait=[0,5]
 		layer.stereo=[-1,1]
 		layer.volume=[1,1]
 	}
