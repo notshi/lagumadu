@@ -143,8 +143,9 @@ lagumadu.start=async function(opts)
 		lagumadu.new_sound(layer,"bd3")
 		lagumadu.new_sound(layer,"bd4")
 		lagumadu.new_sound(layer,"shh1")
+		lagumadu.new_sound(layer,"shh2")
 
-		layer.wait=[1,5]
+		layer.wait=[1,7]
 		layer.stereo=[-1,1]
 		layer.volume=[1,1]
 	}
