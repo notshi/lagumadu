@@ -126,9 +126,14 @@ lagumadu.start=async function(opts)
 		let layer=lagumadu.new_layer(idx)
 		lagumadu.layers[idx]=layer
 		
-		lagumadu.new_sound(layer,"drone")
+		lagumadu.new_sound(layer,"no1")
+		lagumadu.new_sound(layer,"no2")
+		lagumadu.new_sound(layer,"no3")
+		lagumadu.new_sound(layer,"no4")
+		lagumadu.new_sound(layer,"shh1")
+		lagumadu.new_sound(layer,"shh2")
 		
-		layer.wait=[0,1]
+		layer.wait=[0,5]
 		layer.stereo=[0,0]
 		layer.volume=[1,1]
 	}
@@ -143,7 +148,10 @@ lagumadu.start=async function(opts)
 		lagumadu.new_sound(layer,"bd3")
 		lagumadu.new_sound(layer,"bd4")
 		lagumadu.new_sound(layer,"shh1")
-		lagumadu.new_sound(layer,"shh2")
+		lagumadu.new_sound(layer,"bd9")
+		lagumadu.new_sound(layer,"bd10")
+		lagumadu.new_sound(layer,"bd11")
+		lagumadu.new_sound(layer,"bd14")
 
 		layer.wait=[1,7]
 		layer.stereo=[-1,1]
@@ -160,6 +168,9 @@ lagumadu.start=async function(opts)
 		lagumadu.new_sound(layer,"bd7")
 		lagumadu.new_sound(layer,"bd8")
 		lagumadu.new_sound(layer,"shh2")
+		lagumadu.new_sound(layer,"bd12")
+		lagumadu.new_sound(layer,"bd13")
+		lagumadu.new_sound(layer,"bd15")
 
 		layer.wait=[0,2]
 		layer.stereo=[-1,1]
