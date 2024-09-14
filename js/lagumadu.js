@@ -134,8 +134,9 @@ lagumadu.start=async function(opts)
 		lagumadu.new_sound(layer,"no6")
 		lagumadu.new_sound(layer,"shh1")
 		lagumadu.new_sound(layer,"shh2")
+		lagumadu.new_sound(layer,"shh3")
 		
-		layer.wait=[0,60]
+		layer.wait=[0,10]
 		layer.stereo=[0,0]
 		layer.volume=[1,1]
 	}
@@ -150,6 +151,7 @@ lagumadu.start=async function(opts)
 		lagumadu.new_sound(layer,"bd3")
 		lagumadu.new_sound(layer,"bd4")
 		lagumadu.new_sound(layer,"shh1")
+		lagumadu.new_sound(layer,"shh3")
 		lagumadu.new_sound(layer,"bd9")
 		lagumadu.new_sound(layer,"bd10")
 		lagumadu.new_sound(layer,"bd11")
@@ -170,6 +172,7 @@ lagumadu.start=async function(opts)
 		lagumadu.new_sound(layer,"bd7")
 		lagumadu.new_sound(layer,"bd8")
 		lagumadu.new_sound(layer,"shh2")
+		lagumadu.new_sound(layer,"shh3")
 		lagumadu.new_sound(layer,"bd12")
 		lagumadu.new_sound(layer,"bd13")
 		lagumadu.new_sound(layer,"bd15")
@@ -189,6 +192,8 @@ lagumadu.start=async function(opts)
 		lagumadu.new_sound(layer,"sg3")
 		lagumadu.new_sound(layer,"sg4")
 		lagumadu.new_sound(layer,"sg5")
+		lagumadu.new_sound(layer,"sg6")
+		lagumadu.new_sound(layer,"sg7")
 
 		layer.wait=[10,60] // min, max in seconds delay
 		layer.stereo=[-1,1]
