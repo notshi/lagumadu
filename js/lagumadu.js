@@ -17,6 +17,31 @@ let htmltemplate=function(s)
     return temp.content.firstChild
 }
 
+lagumadu.log=function(idx,text)
+{
+	if( !lagumadu.logdivs )
+	{
+		lagumadu.logdivs=[]
+		lagumadu.logdivs[0]=document.getElementById("chan0");
+		lagumadu.logdivs[1]=document.getElementById("chan1");
+		lagumadu.logdivs[2]=document.getElementById("chan2");
+		lagumadu.logdivs[3]=document.getElementById("chan3");
+	}
+	if(idx==-1) // all\
+	{
+		for(let d of lagumadu.logdivs)
+		{
+			d.innerText=text
+		}
+	}
+	let d=lagumadu.logdivs[idx]
+	if(d)
+	{
+		d.innerText=text
+	}
+}
+
+
 
 lagumadu.layer_shuffle=function(layer)
 {
@@ -35,6 +60,13 @@ lagumadu.update_layer=function(layer)
 	{
 		if( layer.sound.playing() ) // wait for sound to end
 		{
+
+			let t=layer.play_now + layer.sound._duration - (performance.now()/1000)
+			let vp=Math.floor(layer.volume_num*100)+"%"
+			let sp=layer.stereo_num.toFixed(2)
+			if(sp>=0){sp="+"+sp}
+			lagumadu.log(layer.idx,"play "+vp+" "+layer.sound.myname.padStart(12," ")+" "+sp+"<> "+t.toFixed(1))
+
 			return
 		}
 	}
@@ -47,11 +79,12 @@ lagumadu.update_layer=function(layer)
 	if(!layer.time_len)
 	{
 		layer.time_len=layer.wait[0]+((layer.wait[1]-layer.wait[0])*Math.random())
-		console.log("wait",layer.idx,layer.time_len)
 	}
 	
 	if( layer.time_now + layer.time_len > (performance.now()/1000) )
 	{
+		let t=layer.time_now + layer.time_len - (performance.now()/1000)
+		lagumadu.log(layer.idx,"wait "+t.toFixed(1))
 		return // wait
 	}
 
@@ -61,8 +94,6 @@ lagumadu.update_layer=function(layer)
 	layer.stereo_num=layer.stereo[0] + ( Math.random()*(layer.stereo[1]-layer.stereo[0]) )
 	layer.volume_num=layer.volume[0] + ( Math.random()*(layer.volume[1]-layer.volume[0]) )
 
-//	console.log("update "+layer.idx)
-
 	if(layer.toplay.length==0) { lagumadu.layer_shuffle(layer) } // new shuffle?
 	
 	layer.sound=layer.toplay.pop()
@@ -70,8 +101,7 @@ lagumadu.update_layer=function(layer)
 	layer.sound.stereo(layer.stereo_num)
 	layer.sound.volume(layer.volume_num)
 	layer.sound.play()
-	let vp=Math.floor(layer.volume_num*100)+"%"
-	console.log("play",layer.idx,layer.sound.myname,vp,layer.stereo_num)
+	layer.play_now=(performance.now()/1000)
 
 }
 
@@ -79,18 +109,6 @@ lagumadu.new_sound=function(layer,name)
 {
 	let sound=new Howl({
 		src:[ "./data/"+name+".mp3"  ],
-/*
-		onplayerror: function()
-		{
-			console.log("lock")
-			lagumadu.locked=true
-			sound.once('unlock', function()
-			{
-				console.log("unlock")
-				lagumadu.locked=false
-			})
-		}
-*/
 	})
 	sound.myname=name
 	layer.sounds.push(sound)
@@ -117,7 +135,7 @@ lagumadu.new_layer=function(idx)
 
 lagumadu.start=async function(opts)
 {
-	console.log("START lagumadu")
+	lagumadu.log(-1,"start")
 	
 	lagumadu.layers=[]
 
@@ -198,9 +216,12 @@ lagumadu.start=async function(opts)
 	
 	setInterval( lagumadu.update , 100 ) // 10fps?
 
+	document.addEventListener("click",function(){lagumadu.clicked=true})
+	
 }
 
-lagumadu.loading=true
+lagumadu.clicked=false
+lagumadu.loading=1
 lagumadu.update=async function(opts)
 {
 	if(lagumadu.locked) // wait for click
@@ -216,12 +237,18 @@ lagumadu.update=async function(opts)
 			{
 				if(sound.state()!="loaded")
 				{
-					console.log( sound.state() )
+					lagumadu.loading++
+					lagumadu.log(-1,sound.state()+" "+lagumadu.loading )
 					return
 				}
 			}
 		}
 		lagumadu.loading=false
+	}
+	if(!lagumadu.clicked)
+	{
+		lagumadu.log(-1,"CLICK ANYWHERE TO BEGIN THE INVOCATION" )
+		return
 	}
 
 	for(let layer of lagumadu.layers)
