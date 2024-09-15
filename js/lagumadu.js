@@ -65,7 +65,7 @@ lagumadu.update_layer=function(layer)
 			let vp=Math.floor(layer.volume_num*100)+"%"
 			let sp=layer.stereo_num.toFixed(2)
 			if(sp>=0){sp="+"+sp}
-			lagumadu.log(layer.idx,"play "+vp+" "+layer.sound.myname.padStart(12," ")+" "+sp+"<> "+t.toFixed(1))
+			lagumadu.log(layer.idx,"play "+vp+" "+sp+"<> "+layer.sound.myname.padStart(12," ")+" "+t.toFixed(1))
 
 			return
 		}
