@@ -21,6 +21,7 @@ let htmltemplate=function(s)
     return temp.content.firstChild
 }
 
+
 lagumadu.log=function(idx,text)
 {
 	if( !lagumadu.logdivs )
@@ -130,9 +131,9 @@ lagumadu.new_layer=function(idx)
 	
 	layer.toplay=[]
 	
-	layer.wait=[0,0]
-	layer.stereo=[0,0]
-	layer.volume=[1,1]
+	layer.wait=[0]
+	layer.stereo=[0]
+	layer.volume=[1]
 	
 	return layer
 }
