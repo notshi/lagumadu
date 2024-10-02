@@ -185,6 +185,18 @@ lagumadu.start=async function(opts)
 		lagumadu.new_sound(layer,"bd9")
 		lagumadu.new_sound(layer,"bd10")
 		lagumadu.new_sound(layer,"bd14")
+		lagumadu.new_sound(layer,"bd17")
+		lagumadu.new_sound(layer,"bd18")
+		lagumadu.new_sound(layer,"bd19")
+		lagumadu.new_sound(layer,"bd20")
+		lagumadu.new_sound(layer,"bd31")
+		lagumadu.new_sound(layer,"bd32")
+		lagumadu.new_sound(layer,"bd33")
+		lagumadu.new_sound(layer,"bd34")
+		lagumadu.new_sound(layer,"bd35")
+		lagumadu.new_sound(layer,"bd36")
+		lagumadu.new_sound(layer,"bd37")
+		lagumadu.new_sound(layer,"bd38")
 
 		layer.wait=[0,5,10]
 		layer.stereo=[-1,0.5,1]
@@ -205,6 +217,18 @@ lagumadu.start=async function(opts)
 		lagumadu.new_sound(layer,"bd13")
 		lagumadu.new_sound(layer,"bd15")
 		lagumadu.new_sound(layer,"bd16")
+		lagumadu.new_sound(layer,"bd22")
+		lagumadu.new_sound(layer,"bd23")
+		lagumadu.new_sound(layer,"bd25")
+		lagumadu.new_sound(layer,"bd26")
+		lagumadu.new_sound(layer,"bd28")
+		lagumadu.new_sound(layer,"bd29")
+		lagumadu.new_sound(layer,"bd40")
+		lagumadu.new_sound(layer,"bd41")
+		lagumadu.new_sound(layer,"bd42")
+		lagumadu.new_sound(layer,"bd43")
+		lagumadu.new_sound(layer,"bd44")
+		lagumadu.new_sound(layer,"bd45")
 
 		layer.wait=[0,1,2,3,4,5]
 		layer.stereo=[-1,0,1]
@@ -218,6 +242,7 @@ lagumadu.start=async function(opts)
 		
 		lagumadu.new_sound(layer,"sg1")
 		lagumadu.new_sound(layer,"sg2")
+		lagumadu.new_sound(layer,"sg3")
 		lagumadu.new_sound(layer,"sg4")
 		lagumadu.new_sound(layer,"sg5")
 		lagumadu.new_sound(layer,"sg9")
@@ -236,12 +261,16 @@ lagumadu.start=async function(opts)
 		let layer=lagumadu.new_layer(idx)
 		lagumadu.layers[idx]=layer
 		
-		lagumadu.new_sound(layer,"sg3")
 		lagumadu.new_sound(layer,"sg7")
 		lagumadu.new_sound(layer,"bd2")
 		lagumadu.new_sound(layer,"bd11")
+		lagumadu.new_sound(layer,"bd21")
+		lagumadu.new_sound(layer,"bd24")
+		lagumadu.new_sound(layer,"bd27")
+		lagumadu.new_sound(layer,"bd30")
+		lagumadu.new_sound(layer,"bd39")
 
-		layer.wait=[30,70]
+		layer.wait=[30,70,110]
 		layer.stereo=[-1,1]
 		layer.volume=[0.3,0.7]
 	}
