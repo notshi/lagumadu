@@ -78,7 +78,7 @@
   "_root": "./",
   "_site": "{_root}",
   "_sourcename": "lagumadu.^.html",
-  "body": "<div class=\"start\">\nClick here to start.\t\n</div>\n\n<div>\n\t<pre id=\"chan0\"></pre>\n\t<pre id=\"chan1\"></pre>\n\t<pre id=\"chan2\"></pre>\n\t<pre id=\"chan3\"></pre>\n\t<pre id=\"chan4\"></pre>\n</div>\n\n<script src=\"./js/lagumadu.js\"></script>\n<script type=\"module\">\n\tlet opts={}\n\tlet app=await lagumadu\n\tapp.default.start(opts)\n</script>",
+  "body": "<div class=\"start\">\nClick here to start\t\n</div>\n\n<div>\n\t<pre id=\"chan0\"></pre>\n\t<pre id=\"chan1\"></pre>\n\t<pre id=\"chan2\"></pre>\n\t<pre id=\"chan3\"></pre>\n\t<pre id=\"chan4\"></pre>\n</div>\n\n<script src=\"./js/lagumadu.js\"></script>\n<script type=\"module\">\n\tlet opts={}\n\tlet app=await lagumadu\n\tapp.default.start(opts)\n</script>",
   "title": "LAGU MADU - DENGAR MANIS YA - shi Blank"
  }
 }
