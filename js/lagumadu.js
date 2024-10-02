@@ -31,6 +31,7 @@ lagumadu.log=function(idx,text)
 		lagumadu.logdivs[1]=document.getElementById("chan1");
 		lagumadu.logdivs[2]=document.getElementById("chan2");
 		lagumadu.logdivs[3]=document.getElementById("chan3");
+		lagumadu.logdivs[4]=document.getElementById("chan4");
 	}
 	if(idx==-1) // all\
 	{
@@ -155,6 +156,17 @@ lagumadu.start=async function(opts)
 		lagumadu.new_sound(layer,"no4")
 		lagumadu.new_sound(layer,"no5")
 		lagumadu.new_sound(layer,"no6")
+		lagumadu.new_sound(layer,"sg6")
+		lagumadu.new_sound(layer,"no7")
+		lagumadu.new_sound(layer,"no8")
+		lagumadu.new_sound(layer,"no9")
+		lagumadu.new_sound(layer,"no10")
+		lagumadu.new_sound(layer,"no11")
+		lagumadu.new_sound(layer,"no12")
+		lagumadu.new_sound(layer,"no13")
+		lagumadu.new_sound(layer,"no14")
+		lagumadu.new_sound(layer,"no15")
+		lagumadu.new_sound(layer,"no16")
 		
 		layer.wait=[0,10,20]
 		layer.stereo=[0]
@@ -167,13 +179,11 @@ lagumadu.start=async function(opts)
 		lagumadu.layers[idx]=layer
 		
 		lagumadu.new_sound(layer,"bd1")
-		lagumadu.new_sound(layer,"bd2")
 		lagumadu.new_sound(layer,"bd3")
 		lagumadu.new_sound(layer,"bd4")
 		lagumadu.new_sound(layer,"shh3")
 		lagumadu.new_sound(layer,"bd9")
 		lagumadu.new_sound(layer,"bd10")
-		lagumadu.new_sound(layer,"bd11")
 		lagumadu.new_sound(layer,"bd14")
 
 		layer.wait=[0,5,10]
@@ -194,6 +204,7 @@ lagumadu.start=async function(opts)
 		lagumadu.new_sound(layer,"bd12")
 		lagumadu.new_sound(layer,"bd13")
 		lagumadu.new_sound(layer,"bd15")
+		lagumadu.new_sound(layer,"bd16")
 
 		layer.wait=[0,1,2,3,4,5]
 		layer.stereo=[-1,0,1]
@@ -207,15 +218,32 @@ lagumadu.start=async function(opts)
 		
 		lagumadu.new_sound(layer,"sg1")
 		lagumadu.new_sound(layer,"sg2")
-		lagumadu.new_sound(layer,"sg3")
 		lagumadu.new_sound(layer,"sg4")
 		lagumadu.new_sound(layer,"sg5")
-		lagumadu.new_sound(layer,"sg6")
-		lagumadu.new_sound(layer,"sg7")
+		lagumadu.new_sound(layer,"sg9")
+		lagumadu.new_sound(layer,"sg10")
+		lagumadu.new_sound(layer,"sg11")
+		lagumadu.new_sound(layer,"sg12")
+		lagumadu.new_sound(layer,"sg13")
 
 		layer.wait=[10,20,30,40,50,60]
 		layer.stereo=[-1,-0.5,1]
 		layer.volume=[0.5]
+	}
+
+	{
+		let idx=4 // Short sounds
+		let layer=lagumadu.new_layer(idx)
+		lagumadu.layers[idx]=layer
+		
+		lagumadu.new_sound(layer,"sg3")
+		lagumadu.new_sound(layer,"sg7")
+		lagumadu.new_sound(layer,"bd2")
+		lagumadu.new_sound(layer,"bd11")
+
+		layer.wait=[30,70]
+		layer.stereo=[-1,1]
+		layer.volume=[0.3,0.7]
 	}
 	
 	
@@ -252,7 +280,7 @@ lagumadu.update=async function(opts)
 	}
 	if(!lagumadu.clicked)
 	{
-		lagumadu.log(-1,"CLICK ANYWHERE TO BEGIN THE INVOCATION" )
+		lagumadu.log(-1,"CHANNEL LOADED - CLICK ANYWHERE TO START" )
 		return
 	}
 
