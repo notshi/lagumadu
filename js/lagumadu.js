@@ -280,6 +280,14 @@ lagumadu.start=async function(opts)
 
 	document.addEventListener("click",function(){lagumadu.clicked=true})
 	
+	// will firefox allow audio to just work?
+	if( navigator && navigator.getAutoplayPolicy ) // this is firefox?
+	{
+		if( navigator.getAutoplayPolicy("mediaelement") === "allowed" )
+		{
+			lagumadu.clicked=true
+		}
+	}
 }
 
 lagumadu.clicked=false
