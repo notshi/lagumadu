@@ -46,6 +46,8 @@ html        {font-size:18px;}
 body        {font-size:1.0rem; line-height:1.75em;}
 .all		{width:800px;}
 .all img	{width:72px;}
+.cc,
+.im,
 .cast img	{width:initial;}
 
 }
@@ -55,6 +57,8 @@ html        {font-size:18px;}
 body        {font-size:1.0rem; line-height:1.75em;}
 .all		{width:800px;}
 .all img	{width:72px;}
+.cc,
+.im,
 .cast img	{width:initial;}
 
 }
