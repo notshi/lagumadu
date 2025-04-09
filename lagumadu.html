@@ -5,7 +5,7 @@
 
 /*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}img,embed,iframe,object,audio,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0;text-align:left}
 
-body		{background:#e7e7e7; background:url("https://notshi.github.io//data/lagu1.jpg"); background-attachment:fixed; font-family:monospace, sans-serif; font-size:16px; line-height:24px; color:#444; width:100%; padding:50px;}
+body		{background:#e7e7e7; background:url("./data/lagu1.jpg"); background-attachment:fixed; font-family:monospace, sans-serif; font-size:16px; line-height:24px; color:#444; width:100%; padding:2em;}
 h1			{font-size:4em; font-weight:normal; color:#1400ff;}
 h2			{font-size:2em; font-weight:normal;}
 h3			{font-weight:normal; color:#666; margin-bottom:1em;}
@@ -13,7 +13,14 @@ a			{color:#1400ff;}
 blockquote	{display:block; margin:0 auto; margin:1em; font-style:italic;}
 
 .all		{width:960px; margin:0 auto; background-color:#fff; padding:2em;}
-.start		{text-align:center; font-size:4em; padding:2em 0;}
+.all img	{width:89px;}
+.start		{text-align:center; font-size:4em;}
+.chan		{background-color:#fff; margin:0 auto; width:440px; padding:1em 2em;}
+.cast		{background-color:#fff; margin:0 auto; line-height:1.75em; padding:1em 2em; margin-top:2em;}
+.cast img	{width:initial;}
+.cc			{background-color:#fff; margin:0 auto; font-size:10px; line-height:1.75em; padding:2em 0; margin-top:2em; width:640px; text-align:center;}
+.im			{background-color:#fff; margin:0 auto; font-size:10px; line-height:1.75em; padding:2em; margin-top:2em; width:640px; text-align:center;}
+.back_link	{display:block; background-color:#fff; text-align:center; margin:0 auto; width:200px; margin-top:2em; padding:0.5em 0;}
 .wrap		{display:flex; margin:0 auto; flex-wrap:wrap; justify-content:space-evenly; gap:14px; margin-top:15px;}
 .chan1,
 .chan2,
@@ -21,18 +28,61 @@ blockquote	{display:block; margin:0 auto; margin:1em; font-style:italic;}
 .chan4		{flex-basis:260px; padding:20px 20px;}
 
 
+@media (min-width: 360px) and (max-width: 767.98px) {
+html        {font-size:18px;}
+body        {font-size:1.0rem; line-height:1.75em;}
+.all		{width:800px;}
+.all img	{width:72px;}
+.cast img	{width:initial;}
+
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+html        {font-size:18px;}
+body        {font-size:1.0rem; line-height:1.75em;}
+.all		{width:800px;}
+.all img	{width:72px;}
+.cast img	{width:initial;}
+
+}
+
+
 </style></head>
-<body><div class="all">
+<body><div class="all" style="background-color:transparent;">
 	<div class="start">
 		
 	</div>
-	<div>
+	<div class="chan">
 		<pre id="chan0"></pre>
 		<pre id="chan1"></pre>
 		<pre id="chan2"></pre>
 		<pre id="chan3"></pre>
 		<pre id="chan4"></pre>
 	</div>
+	<div class="cast"><img src="./data/cast1.png"></div>
+	<div class="cast"><p><strong>Bradford Cast</strong><br>bd1 - Soprano Pipistrelle - Pipistrellus pygmaeus<br>bd2 - Common Kingfisher - Alcedo atthis<br>bd3 - Redwing - Turdus iliacus<br>bd4 - Redwing - Turdus iliacus<br>bd5 - Song Thrush - Turdus philomelos<br>bd6 - Wood Warbler - Phylloscopus sibilatrix<br>bd7 - Peregrine Falcon - Falco peregrinus<br>bd8 - Common Frog - Rana temporaria<br>bd9 - Common Blackbird - Turdus merula<br>bd10 - Tawny Owl - Strix aluco<br>bd11 - Common Quail - Coturnix coturnix<br>bd12 - House cricket - Acheta domesticus<br>bd13 - Song Thrush - Turdus philomelos<br>bd14 - Rook - Corvus frugilegus<br>bd15 - Identity Unknown<br>bd16 - Common Frog - Rana temporaria<br>bd17 - Mistle Thrush - Turdus viscivorus viscivorus<br>bd18 - Song Thrush - Turdus philomelos philomelos<br>bd19 - Common Kestrel - Falco tinnunculus tinnunculus<br>bd20 - Eurasian Curlew - Numenius arquata arquata<br>bd21 - Lesser Black-backed Gull - Larus fuscus graellsii<br>bd22 - Common Chaffinch - Fringilla coelebs gengleri<br>bd23 - Tawny Owl - Strix aluco aluco<br>bd24 - Red Kite - Milvus milvus<br>bd25 - Carrion Crow - Corvus corone corone<br>bd26 - Dunnock - Prunella modularis occidentalis<br>bd27 - Eurasian Wren - Troglodytes troglodytes indigenus<br>bd28 - Eurasian Collared Dove - Streptopelia decaocto<br>bd29 - Canada Goose - Branta canadensis<br>bd30 - Common Wood Pigeon - Columba palumbus<br>bd31 - Common Crane - Grus grus<br>bd32 - Eurasian Blue Tit - Cyanistes caeruleus<br>bd33 - Common Toad - Bufo bufo<br>bd34 - Western Jackdaw - Coloeus monedula<br>bd35 - Long-tailed Tit - Aegithalos caudatus rosaceus<br>bd36 - Willow Warbler - Phylloscopus trochilus<br>bd37 - Eurasian Bullfinch - Pyrrhula pyrrhula<br>bd38 - European Greenfinch - Chloris chloris<br>bd39 - Common Starling - Sturnus vulgaris<br>bd40 - Barn Swallow - Hirundo rustica<br>bd41 - Common Chiffchaff - Phylloscopus collybita<br>bd42 - House Sparrow - Passer domesticus domesticus<br>bd43 - European Robin - Erithacus rubecula<br>bd44 - Common Swift - Apus apus<br>bd45 - Bohemian Waxwing - Bombycilla garrulus</p>
+</div>
+	<div class="cast"><img src="./data/cast2.png"></div>
+	<div class="cast"><p><strong>Singapore Cast</strong><br>sg1 - Ingerophrynus quadriporcatus<br>sg2 - Hylarana laterimaculata<br>sg3 - Johor Tiny Sticky Frog - Kalophrynus limbooliati<br>sg4 - Leptobrachium nigrops<br>sg5 - Asian Painted Frog - Kaloula pulchra<br>sg6 - Singapore Botanic Gardens<br>sg7 - Asian Koel<br>sg9 - Little Spiderhunter - Arachnothera longirostra longirostra<br>sg10 - Scaly-breasted Munia - Lonchura punctulata<br>sg11 - Van Hasselt&#39;s Sunbird - Leptocoma brasiliana<br>sg12 - Baya Weaver - Ploceus philippinus<br>sg13 - Golden-backed Weaver - Ploceus jacksoni</p>
+</div>
+	<div class="cast"><p><strong>Field Recordings</strong><br>no1, no13 - Wetherspoons 12 July 2023<br>no2, no9, no15 - Oastler Market 24 Feb 2023<br>no3, no11 - Northgate Bistro 4 Aug 2023<br>no4, no8 - Kirkgate Market<br>no5, no14 - Baxandalls Cafe 7 August 2023<br>no6, no10, no16 - Atheneum Cafe 8 Aug 2023<br>no7, no12 - Waves against shore in Singapore</p>
+</div>
+	<div class="cc"><p><strong>Citation Sounds</strong><br>Ding Li Yong, XC884157. Accessible at <a href="http://www.xeno-canto.org/884157">www.xeno-canto.org/884157</a>. CC BY-NC-ND 4.0<br>Ding Li Yong, XC884162. Accessible at <a href="http://www.xeno-canto.org/884162">www.xeno-canto.org/884162</a>. CC BY-NC-ND 4.0<br>Ding Li Yong, XC884166. Accessible at <a href="http://www.xeno-canto.org/884166">www.xeno-canto.org/884166</a>. CC BY-NC-ND 4.0<br>Ding Li Yong, XC884168. Accessible at <a href="http://www.xeno-canto.org/884168">www.xeno-canto.org/884168</a>. CC BY-NC-ND 4.0<br>Greg Irving, XC909893. Accessible at <a href="http://www.xeno-canto.org/909893">www.xeno-canto.org/909893</a>. CC BY-NC-ND 4.0<br>Okamoto Keita Sin, XC402334. Accessible at <a href="http://www.xeno-canto.org/402334">www.xeno-canto.org/402334</a>. CC BY-NC-SA 4.0<br>Yeo SB, XC366272. Accessible at <a href="http://www.xeno-canto.org/366272">www.xeno-canto.org/366272</a>. CC BY-NC-SA 4.0<br>Okamoto Keita Sin, XC578361. Accessible at <a href="http://www.xeno-canto.org/578361">www.xeno-canto.org/578361</a>. CC BY-NC-SA 4.0<br>Kim Chuah Lim, XC644251. Accessible at <a href="http://www.xeno-canto.org/644251">www.xeno-canto.org/644251</a>. CC BY-NC-SA 4.0<br>Kim Chuah Lim, XC787554. Accessible at <a href="http://www.xeno-canto.org/787554">www.xeno-canto.org/787554</a>. CC BY-NC-SA 4.0<br>Simon Elliott, XC817387. Accessible at <a href="http://www.xeno-canto.org/817387">www.xeno-canto.org/817387</a>. CC BY-NC-ND 4.0<br>Mark Doveston, XC215924. Accessible at <a href="http://www.xeno-canto.org/215924">www.xeno-canto.org/215924</a>. CC BY-NC-SA 4.0<br>Mark Doveston, XC217054. Accessible at <a href="http://www.xeno-canto.org/217054">www.xeno-canto.org/217054</a>. CC BY-NC-SA 4.0<br>Mark Doveston, XC224188. Accessible at <a href="http://www.xeno-canto.org/224188">www.xeno-canto.org/224188</a>. CC BY-NC-SA 4.0<br>Mark Doveston, XC237596. Accessible at <a href="http://www.xeno-canto.org/237596">www.xeno-canto.org/237596</a>. CC BY-NC-SA 4.0<br>Mark Doveston, XC237604. Accessible at <a href="http://www.xeno-canto.org/237604">www.xeno-canto.org/237604</a>. CC BY-NC-SA 4.0<br>David Pennington, XC503949. Accessible at <a href="http://www.xeno-canto.org/503949">www.xeno-canto.org/503949</a>. CC BY-NC-SA 4.0<br>david m, XC884087. Accessible at <a href="http://www.xeno-canto.org/884087">www.xeno-canto.org/884087</a>. CC BY-NC-ND 4.0<br>Fraser Simpson, XC776825. Accessible at <a href="http://www.xeno-canto.org/776825">www.xeno-canto.org/776825</a>. CC BY-NC-SA 4.0<br>david m, XC884087. Accessible at <a href="http://www.xeno-canto.org/884087">www.xeno-canto.org/884087</a>. CC BY-NC-ND 4.0<br>Paul Holt, XC546314. Accessible at <a href="http://www.xeno-canto.org/546314">www.xeno-canto.org/546314</a>. CC BY-NC-SA 4.0<br>SawaSawa, XC550100. Accessible at <a href="http://www.xeno-canto.org/550100">www.xeno-canto.org/550100</a>. CC BY-NC-SA 4.0<br>Stuart Fisher, XC59756. Accessible at <a href="http://www.xeno-canto.org/59756">www.xeno-canto.org/59756</a>. CC BY-NC-ND 4.0<br>Richard Dunn, XC70270. Accessible at <a href="http://www.xeno-canto.org/70270">www.xeno-canto.org/70270</a>. CC BY-NC-ND 4.0<br>Andrew Harrop, XC710843. Accessible at <a href="http://www.xeno-canto.org/710843">www.xeno-canto.org/710843</a>. CC BY-NC-SA 4.0<br>Richard Dunn, XC76197. Accessible at <a href="http://www.xeno-canto.org/76197">www.xeno-canto.org/76197</a>. CC BY-NC-ND 4.0<br>david m, XC775903. Accessible at <a href="http://www.xeno-canto.org/775903">www.xeno-canto.org/775903</a>. CC BY-NC-ND 4.0<br>Simon Elliott, XC803050. Accessible at <a href="http://www.xeno-canto.org/803050">www.xeno-canto.org/803050</a>. CC BY-NC-ND 4.0<br>Stuart Fisher, XC821439. Accessible at <a href="http://www.xeno-canto.org/821439">www.xeno-canto.org/821439</a>. CC BY-NC-SA 4.0<br>James Lambert, XC822149. Accessible at <a href="http://www.xeno-canto.org/822149">www.xeno-canto.org/822149</a>. CC BY-NC-ND 4.0<br>James Lambert, XC822155. Accessible at <a href="http://www.xeno-canto.org/822155">www.xeno-canto.org/822155</a>. CC BY-NC-ND 4.0<br>James Lambert, XC822166. Accessible at <a href="http://www.xeno-canto.org/822166">www.xeno-canto.org/822166</a>. CC BY-NC-ND 4.0<br>david m, XC833486. Accessible at <a href="http://www.xeno-canto.org/833486">www.xeno-canto.org/833486</a>. CC BY-NC-ND 4.0<br>Andrew Harrop, XC844368. Accessible at <a href="http://www.xeno-canto.org/844368">www.xeno-canto.org/844368</a>. CC BY-NC-SA 4.0<br>Andrew Harrop, XC862283. Accessible at <a href="http://www.xeno-canto.org/862283">www.xeno-canto.org/862283</a>. CC BY-NC-SA 4.0<br>Chris Batty, XC884089. Accessible at <a href="http://www.xeno-canto.org/884089">www.xeno-canto.org/884089</a>. CC BY-NC-SA 4.0<br>Mark Plummer, XC890389. Accessible at <a href="http://www.xeno-canto.org/890389">www.xeno-canto.org/890389</a>. CC BY-NC-SA 4.0<br>Simon Elliott, XC893536. Accessible at <a href="http://www.xeno-canto.org/893536">www.xeno-canto.org/893536</a>. CC BY-NC-ND 4.0<br>Simon Elliott, XC894175. Accessible at <a href="http://www.xeno-canto.org/894175">www.xeno-canto.org/894175</a>. CC BY-NC-ND 4.0<br>Agris Celmins, XC901932. Accessible at <a href="http://www.xeno-canto.org/901932">www.xeno-canto.org/901932</a>. CC BY-NC-ND 4.0<br>David Tattersley, XC904524. Accessible at <a href="http://www.xeno-canto.org/904524">www.xeno-canto.org/904524</a>. CC BY-NC-SA 4.0<br>david m, XC906917. Accessible at <a href="http://www.xeno-canto.org/906917">www.xeno-canto.org/906917</a>. CC BY-NC-ND 4.0<br>David Tattersley, XC910897. Accessible at <a href="http://www.xeno-canto.org/910897">www.xeno-canto.org/910897</a>. CC BY-NC-SA 4.0<br>Mark Plummer, XC915757. Accessible at <a href="http://www.xeno-canto.org/915757">www.xeno-canto.org/915757</a>. CC BY-NC-SA 4.0<br>Mark Plummer, XC916030. Accessible at <a href="http://www.xeno-canto.org/916030">www.xeno-canto.org/916030</a>. CC BY-NC-SA 4.0<br>Paul Driver, XC921620. Accessible at <a href="http://www.xeno-canto.org/921620">www.xeno-canto.org/921620</a>. CC BY-NC-SA 4.0<br>david m, XC931588. Accessible at <a href="http://www.xeno-canto.org/931588">www.xeno-canto.org/931588</a>. CC BY-NC-ND 4.0<br>Mark Plummer, XC933250. Accessible at <a href="http://www.xeno-canto.org/933250">www.xeno-canto.org/933250</a>. CC BY-NC-SA 4.0<br>Arjun Dutta, XC935410. Accessible at <a href="http://www.xeno-canto.org/935410">www.xeno-canto.org/935410</a>. CC BY-NC-SA 4.0<br>Arjun Dutta, XC935723. Accessible at <a href="http://www.xeno-canto.org/935723">www.xeno-canto.org/935723</a>. CC BY-NC-SA 4.0</p>
+</div>
+	<div class="im"><p><strong>Citation Images</strong></p>
+<p>“Mehlschwalbe Delichon urbicum.jpg” by Andreas Trepte, <a href="http://www.avi-fauna.info">www.avi-fauna.info</a>.<br><a href="https://commons.wikimedia.org/wiki/File:Mehlschwalbe_Delichon_urbicum.jpg">https://commons.wikimedia.org/wiki/File:Mehlschwalbe_Delichon_urbicum.jpg</a>. CC BY-NC-SA 2.5</p>
+<p>“Rotmilan blickt über die Schulter.jpg” by Michael Graf.<br><a href="https://commons.wikimedia.org/wiki/File:Rotmilan_blickt_%C3%BCber_die_Schulter.jpg">https://commons.wikimedia.org/wiki/File:Rotmilan_blickt_%C3%BCber_die_Schulter.jpg</a>. CC BY-SA 4.0</p>
+<p>“Ring ouzel, Turdus torquatus, Ringtrast [Explored 2023-10-21]” by Blondinrikard Fröberg.<br><a href="https://flickr.com/photos/44093058@N06/53274490368">https://flickr.com/photos/44093058@N06/53274490368</a>. CC BY 2.0</p>
+<p>“Photo 67783316” by Tommy Andriollo.<br><a href="https://www.inaturalist.org/photos/67783316">https://www.inaturalist.org/photos/67783316</a>. CC BY 4.0</p>
+<p>“Nyctalus noctula.jpg” by Markus Nolf.<br><a href="https://commons.wikimedia.org/wiki/File:Nyctalus_noctula.jpg">https://commons.wikimedia.org/wiki/File:Nyctalus_noctula.jpg</a>. CC BY-SA 3.0 </p>
+<p>“Pipistrellus pygmaeus 07.jpg” by Evgeniy Yakhontov.<br><a href="https://commons.wikimedia.org/wiki/File:Pipistrellus_pygmaeus_07.jpg">https://commons.wikimedia.org/wiki/File:Pipistrellus_pygmaeus_07.jpg</a>. CC BY-SA 3.0</p>
+<p>“060809-224340_0029_Myotis_brandtii.jpg” by Herman Lankreijer, <a href="http://www.hermans.homepage.eu">www.hermans.homepage.eu</a><br><a href="https://commons.wikimedia.org/wiki/File:060809-224340_0029_Myotis_brandtii.jpg">https://commons.wikimedia.org/wiki/File:060809-224340_0029_Myotis_brandtii.jpg</a>. CC BY-SA 3.0</p>
+<p>“Photo 16237565” by FPCR.<br><a href="https://commons.wikimedia.org/wiki/File:Plecotus_auritus_16237565.jpg">https://commons.wikimedia.org/wiki/File:Plecotus_auritus_16237565.jpg</a>. CC BY 4.0</p>
+<p>“Myotis daubentonii 2.jpg” by Lennart Lennuk.<br><a href="https://commons.wikimedia.org/wiki/File:Myotis_daubentonii_2.jpg">https://commons.wikimedia.org/wiki/File:Myotis_daubentonii_2.jpg</a> CC BY 4.0</p>
+<p>“Myotis mystacinus - Manuel Ruedi.JPG” by Manuel Ruedi (Natural History Museum of Geneva).<br><a href="https://commons.wikimedia.org/wiki/File:Myotis_mystacinus_-_Manuel_Ruedi.JPG">https://commons.wikimedia.org/wiki/File:Myotis_mystacinus_-_Manuel_Ruedi.JPG</a>. CC BY-SA 3.0 </p>
+<p>“Pipistrellus female-1.jpg” by Drahkrub.<br><a href="https://commons.wikimedia.org/wiki/File:Pipistrellus_female-1.jpg">https://commons.wikimedia.org/wiki/File:Pipistrellus_female-1.jpg</a>. CC BY 4.0</p>
+</div>
+	<a class="back_link" href="./index.html">Back</a>
 </div>
 
 <script src="./js/lagumadu.js"></script>
