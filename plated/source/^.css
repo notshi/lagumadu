@@ -49,6 +49,7 @@ body        {font-size:1.0rem; line-height:1.75em;}
 .all img	{width:72px;}
 .cc,
 .im			{width:initial; padding:2em;}
+.show img,
 .cast img	{width:initial;}
 
 }
@@ -60,6 +61,7 @@ body        {font-size:1.0rem; line-height:1.75em;}
 .all img	{width:72px;}
 .cc,
 .im			{width:initial; padding:2em;}
+.show img,
 .cast img	{width:initial;}
 
 }
