@@ -27,6 +27,7 @@ blockquote	{display:block; margin:0 auto; margin:1em; font-style:italic;}
 
 .all		{width:960px; margin:0 auto; background-color:#fff; padding:2em;}
 .all img	{width:89px;}
+.show img	{width:448px;}
 .start		{text-align:center; font-size:4em;}
 .chan		{background-color:#fff; margin:0 auto; width:440px; padding:1em 2em;}
 .cast		{background-color:#fff; margin:0 auto; line-height:1.75em; padding:1em 2em; margin-top:2em;}
